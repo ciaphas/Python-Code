@@ -32,6 +32,8 @@ stream = audio.open(format=FORMAT, channels=CHANNELS,
                 rate=RATE, input=True,
                 frames_per_buffer=CHUNK)
 print ("recording...")
+
+
 frames = []
 
 for i in range(0, int(RATE / CHUNK * RECORD_SECONDS)):
