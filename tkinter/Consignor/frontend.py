@@ -1,6 +1,7 @@
 from tkinter import *
 import backend
 from shutil import copyfile
+import barcode
 
 def view_command():
     list1.delete(0,END)

@@ -2,6 +2,7 @@
 import pyaudio
 import wave
 import time
+import sounddevice as sd
 
 
 #This variable creates a custom name for the file that is the current time of completed script
