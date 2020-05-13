@@ -15,7 +15,8 @@ def audio():
     RATE = 44100
     CHUNK = 1024
     #RECORD_SECONDS = 10
-    WAVE_OUTPUT_FILENAME =timestr+'.wav'
+    NAMES = NAME.get()
+    WAVE_OUTPUT_FILENAME =NAMES+'.wav'
     MINS = MIN.get()
     #RECORD_SECONDS=(MINS*60)
     #print(MINS)
@@ -55,23 +56,6 @@ def audio():
     waveFile.writeframes(b''.join(frames))
     waveFile.close()
 
-#def view_command():
-#    list1.delete(0,END)
-#    for row in backend.view():
-#        list1.insert(END,row)
-
-#def add_command():
-#    backend.add_shipment(tkvar.get(),firstname_title.get(),surname_title.get(),addr1_title.get(),addr2_title.get(),town_title.get(),pcode_title.get(),service.get(),con_title.get(),quantity_title.get(),prod.get())
-#    list1.delete(0,END)
-#    list1.insert(END,(tkvar.get(),firstname_title.get(),surname_title.get(),addr1_title.get(),addr2_title.get(),town_title.get(),pcode_title.get(),service.get(),con_title.get(),quantity_title.get(),prod.get()))
-
-#def search_command():
-    #list1.delete(0,END)
-    #for row in backend.search(tkvar.get(),firstname_title.get(),surname_title.get(),addr1_title.get(),addr2_title.get(),town_title.get(),pcode_title.get(),service.get(),con_title.get(),quantity_title.get(),prod.get()):
-    #    list1.insert(END,row)
-
-#def export_command():
-    #backend.export()
 
 
 window=Tk()
@@ -80,10 +64,15 @@ window.wm_title("Audio")
 
 
 l1=Label(window,text="How Many Minutes do you want to record?")
-l1.grid(row=0,column=2)
+l1.grid(row=1,column=2)
 MIN=IntVar()
 e1=Entry(window,textvariable=MIN)
-e1.grid(row=0,column=3)
+e1.grid(row=1,column=3)
+l2=Label(window, text="Name of your Lecture")
+l2.grid(row=0,column=2)
+NAME=StringVar()
+e2=Entry(window,textvariable=NAME)
+e2.grid(row=0,column=3)
 
 
 
@@ -101,7 +90,9 @@ e1.grid(row=0,column=3)
 #b1.grid(row=7,column=5)
 
 b2=Button(window,text="Record", width=10,command=audio)
-b2.grid(row=0, column=5)
+b2.grid(row=1, column=5)
+b3=Button(window,text="Exit", width=10, command=exit)
+b3.grid(row=2, column=5)
 
 
 window.mainloop()
