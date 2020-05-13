@@ -24,7 +24,7 @@ def export_command():
 
 window=Tk()
 
-window.wm_title("Consignor")
+window.wm_title("Orders Completed")
 
 tkvar=StringVar()
 choices = {'Mr', 'Miss', 'Ms','Dr','Mrs'}
@@ -88,9 +88,9 @@ con_title=IntVar()
 e4=Entry(window,textvariable=con_title)
 e4.grid(row=2,column=5)
 
-l5=Label(window,text="Product Code")
+l5=Label(window,text="Item Sold")
 l5.grid(row=3,column=4)
-prod=IntVar()
+prod=StringVar()
 e5=Entry(window,textvariable=prod)
 e5.grid(row=3,column=5)
 
@@ -110,11 +110,14 @@ b1.grid(row=7,column=5)
 b2=Button(window,text="Search Entry", width=12,command=search_command)
 b2.grid(row=8,column=5)
 
-b3=Button(window,text="Add Entry", width=12,command=add_command)
-b3.grid(row=6,column=5)
+#b3=Button(window,text="Add Entry", width=12,command=add_command)
+#b3.grid(row=6,column=5)
 
 b4=Button(window,text="Export Data", width=12,command=export_command)
 b4.grid(row=9,column=5)
+
+b5=Button(window,text="Exit", width=12,command=exit)
+b5.grid(row=10,column=5)
 
 
 

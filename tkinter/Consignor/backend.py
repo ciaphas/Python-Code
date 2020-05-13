@@ -5,7 +5,7 @@ from shutil import copyfile
 def connect():
     conn=sqlite3.connect("consignor.db")
     cur=conn.cursor()
-    cur.execute("CREATE TABLE IF NOT EXISTS shipments (id INTEGER PRIMARY KEY,title text,firstname text,surName text,address1 text,address2 text,town text,pcode_title text, service integer,con integer, quantity integer,product integer)")
+    cur.execute("CREATE TABLE IF NOT EXISTS shipments (id INTEGER PRIMARY KEY,title text,firstname text,surName text,address1 text,address2 text,town text,pcode_title text, service integer,con integer, quantity integer,product text)")
     conn.commit()
     conn.close()
 

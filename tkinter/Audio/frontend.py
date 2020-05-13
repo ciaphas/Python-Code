@@ -5,6 +5,7 @@ import pyaudio
 import wave
 import time
 
+
 def audio():
     #This variable creates a custom name for the file that is the current time of completed script
     timestr = time.strftime("%Y%m%d-%H%M%S")
@@ -60,7 +61,7 @@ def audio():
 
 window=Tk()
 
-window.wm_title("Audio")
+window.wm_title("Audio Lecture Recorder")
 
 
 l1=Label(window,text="How Many Minutes do you want to record?")
@@ -74,20 +75,6 @@ NAME=StringVar()
 e2=Entry(window,textvariable=NAME)
 e2.grid(row=0,column=3)
 
-
-
-#list1=Listbox(window, height=12,width=40)
-#list1.grid(row=6,column=3,rowspan=12,columnspan=2)
-
-#sb1=Scrollbar(window)
-#sb1.grid(row=7,column=5,rowspan=6)
-
-#list1.configure(yscrollcommand=sb1.set)
-#list1.configure(yscrollcommand=sb1.set)
-#sb1.configure(command=list1.yview)
-
-#b1=Button(window,text="View All", width=12)
-#b1.grid(row=7,column=5)
 
 b2=Button(window,text="Record", width=10,command=audio)
 b2.grid(row=1, column=5)
