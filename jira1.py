@@ -26,6 +26,10 @@ df.to_csv('output.csv')
 #df.to_sql('issues', con=engine)
 
 
+rd = pd.read_csv('output.csv')
+print(rd.head(10))
+
+
 #ticket = 'CSGS-6107'
 #issue = jira.issue(ticket)
 
