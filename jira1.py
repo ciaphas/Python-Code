@@ -23,7 +23,7 @@ data = jira.search_issues(JQL)
 
 df = pd.DataFrame(data)
 df.to_csv('output.csv')
-df.to_sql('issues', con=engine)
+#df.to_sql('issues', con=engine)
 
 
 #ticket = 'CSGS-6107'
