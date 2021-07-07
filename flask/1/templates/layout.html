@@ -2,14 +2,45 @@
 <html>
   <head>
       <title>Flask App</title>
-      <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
+      <style>
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: grey;
+      }
+
+      li {
+        float: left;
+      }
+
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      /* Change the link color to #111 (black) on hover */
+      li a:hover {
+        background-color: #111;
+      }
+
+      footer {
+        background-color: grey;
+        text-align: center;
+        color: white
+      }
+</style>
   </head>
   <body>
     <header>
       <div class="container">
-        <h1 class="logo">James's web app</h1>
+        <h1 class="logo"></h1>
         <strong><nav>
-          <ul class="menu">
+          <ul>
             <li><a href="{{ url_for('home') }}">Home</a></li>
             <li><a href="{{ url_for('about') }}">About</a></li>
           </ul>
@@ -21,4 +52,8 @@
         {%endblock%}
     </div>
   </body>
+  <footer>
+  <p>Author: James Carn <a href="mailto:james@jamescarn.co.uk">james@jamescarn.co.uk</a></p>
+<p>Test</p>
+</footer>
 </html>
