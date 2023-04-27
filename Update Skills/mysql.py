@@ -1,7 +1,7 @@
 import os, json, sqlite3
 
 # read JSON file which is in the next parent folder
-file = os.path.abspath('/Users/jim/Documents/dev') + "/newjson1.json"
+file = os.path.abspath('/Users/jim/Documents/GitHub/Python-Code/Update Skills') + "/newjson1.json"
 json_data=open(file).read()
 json_obj = json.loads(json_data)
 
