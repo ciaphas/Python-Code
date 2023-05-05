@@ -28,5 +28,10 @@
 		"person": "El",
 		"year": 2001,
 		"company": "Drayton Manor"
+	},
+	{
+		"person": "Me",
+		"year": NaN,
+		"company": "Home"
 	}
 ]
